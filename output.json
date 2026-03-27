@@ -1,0 +1,93 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "offers-page-functionality;verify-the-offers-dropdwon-for-fights-tab",
+        "keyword": "Scenario",
+        "line": 14,
+        "name": "Verify the Offers dropdwon for Fights tab",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 561825800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 3,
+            "name": "Display the cleartrip application Homepage",
+            "match": {
+              "location": "features\\step-definitions\\login.js:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4205660599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 15,
+            "name": "User clicks on Offers link",
+            "match": {
+              "location": "features\\step-definitions\\offers-page.js:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9062301099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "User clicks on Offers dropdown for Flights tab",
+            "match": {
+              "location": "features\\step-definitions\\offers-page.js:168"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 52597250599,
+              "error_message": "locator.click: Timeout 50000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('//div[@class=\"SumoSelect sumo_offer_tag\"]//ul//li').filter({ hasText: 'Flights' })\u001b[22m\n\n    at World.<anonymous> (C:\\December29\\Cleartrip\\features\\step-definitions\\offers-page.js:179:111)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "User should see the list of available offers for Flights",
+            "match": {
+              "location": "features\\step-definitions\\offers-page.js:184"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 72770099
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "offers-page-functionality",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Offers Page Functionality",
+    "tags": [],
+    "uri": "features\\Offers.feature"
+  }
+]
