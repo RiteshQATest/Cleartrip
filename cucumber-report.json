@@ -1,0 +1,250 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "offers-page-functionality;verify-the-offers-page",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Verify the Offers page",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 528781199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 3,
+            "name": "Display the cleartrip application Homepage",
+            "match": {
+              "location": "features\\step-definitions\\login.js:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3803518299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "User clicks on Offers link",
+            "match": {
+              "location": "features\\step-definitions\\offers-page.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10416159300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "User should be navigated to Offers page successfully",
+            "match": {
+              "location": "features\\step-definitions\\offers-page.js:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 77588600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "User should see the list of available offers",
+            "match": {
+              "location": "features\\step-definitions\\offers-page.js:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 64465000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 60924200
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "offers-page-functionality;verify-the-offers-page-with-valid-filters",
+        "keyword": "Scenario",
+        "line": 9,
+        "name": "Verify the Offers page with valid filters",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 755883799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 3,
+            "name": "Display the cleartrip application Homepage",
+            "match": {
+              "location": "features\\step-definitions\\login.js:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3419634500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 10,
+            "name": "User clicks on Offers link1",
+            "match": {
+              "location": "features\\step-definitions\\offers-page.js:54"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9967814899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "User applies valid filters on Offers page",
+            "match": {
+              "location": "features\\step-definitions\\offers-page.js:77"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 46792300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "User should see the filtered list of offers",
+            "match": {
+              "location": "features\\step-definitions\\offers-page.js:94"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 23487150299
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 44777200
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "offers-page-functionality;verify-the-offers-dropdwon-for-fights-tab",
+        "keyword": "Scenario",
+        "line": 14,
+        "name": "Verify the Offers dropdwon for Fights tab",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 456084199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 3,
+            "name": "Display the cleartrip application Homepage",
+            "match": {
+              "location": "features\\step-definitions\\login.js:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3581555699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 15,
+            "name": "User clicks on Offers link",
+            "match": {
+              "location": "features\\step-definitions\\offers-page.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10165008599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "User clicks on Offers dropdown for Flights tab",
+            "match": {
+              "location": "features\\step-definitions\\offers-page.js:156"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7159550700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "User should see the list of available offers for Flights",
+            "match": {
+              "location": "features\\step-definitions\\offers-page.js:167"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2468800
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 560942800
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "offers-page-functionality",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Offers Page Functionality",
+    "tags": [],
+    "uri": "features\\Offers.feature"
+  }
+]

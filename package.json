@@ -1,0 +1,22 @@
+{
+  "name": "cleartrip",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js",
+    "test:debug": "cucumber-js --format progress-bar"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "@types/node": "^25.4.0"
+  },
+  "dependencies": {
+    "@cucumber/cucumber": "^12.7.0",
+    "node": "^22.22.1"
+  }
+}
