@@ -6,3 +6,23 @@ node_modules/
 /blob-report/
 /playwright/.cache/
 /playwright/.auth/
+
+# Reports
+reports/screenshots/
+reports/videos/
+reports/logs/
+reports/html-snapshots/
+cucumber-report.html
+cucumber-report.json
+output.json
+
+# Environment
+.env
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
