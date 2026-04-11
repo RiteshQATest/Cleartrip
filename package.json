@@ -1,13 +1,24 @@
 {
   "name": "cleartrip",
   "version": "1.0.0",
-  "description": "",
+  "description": "BDD Testing Framework for Cleartrip using Playwright and Cucumber.js",
   "main": "index.js",
   "scripts": {
     "test": "cucumber-js",
-    "test:debug": "cucumber-js --format progress-bar"
+    "test:smoke": "cucumber-js --tags @smoke",
+    "test:regression": "cucumber-js --tags @regression",
+    "test:hotels": "cucumber-js --tags @hotels",
+    "test:flights": "cucumber-js --tags @flights",
+    "test:trains": "cucumber-js --tags @trains",
+    "test:headed": "HEADLESS=false cucumber-js",
+    "test:debug": "HEADLESS=false SLOW_MO=500 cucumber-js --format progress-bar",
+    "test:firefox": "BROWSER=firefox cucumber-js",
+    "test:webkit": "BROWSER=webkit cucumber-js",
+    "test:parallel": "cucumber-js --parallel 2",
+    "test:single": "cucumber-js --parallel 1",
+    "clean": "rm -rf reports/screenshots/* reports/videos/* reports/logs/* reports/html-snapshots/* cucumber-report.html cucumber-report.json output.json"
   },
-  "keywords": [],
+  "keywords": ["playwright", "cucumber", "bdd", "testing", "cleartrip"],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
@@ -17,6 +28,9 @@
   },
   "dependencies": {
     "@cucumber/cucumber": "^12.7.0",
-    "node": "^22.22.1"
+    "dotenv": "^16.4.5",
+    "node": "^22.22.1",
+    "playwright": "^1.58.2",
+    "winston": "^3.17.0"
   }
 }
