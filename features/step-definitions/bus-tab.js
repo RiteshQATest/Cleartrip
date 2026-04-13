@@ -1,6 +1,10 @@
 const { Given, When, Then } = require('@cucumber/cucumber');
 const { expect } = require('@playwright/test');
 
+const SOURCE_INPUT_SELECTOR = 'input[placeholder*="From"], input[placeholder*="Source"], input[placeholder*="from"]';
+const DEST_INPUT_SELECTOR = 'input[placeholder*="To"], input[placeholder*="Destination"], input[placeholder*="to"]';
+const BUS_RESULT_SELECTOR = '[class*="bus-item"], [class*="busItem"], [class*="bus-card"], [class*="busCard"], [class*="result"]';
+
 Given('User navigates to the Bus page', async function () {
     await this.page.goto('https://www.cleartrip.com/bus', { waitUntil: 'domcontentloaded' });
 });
@@ -10,24 +14,24 @@ Then('the Bus page title should be displayed', async function () {
 });
 
 Then('the Bus search form should be visible', async function () {
-    const searchForm = this.page.locator('input[placeholder*="From"], input[placeholder*="Source"], input[placeholder*="from"]').first();
+    const searchForm = this.page.locator(SOURCE_INPUT_SELECTOR).first();
     await expect(searchForm).toBeVisible({ timeout: 10000 });
 });
 
 When('User enters {string} as the source city', async function (city) {
-    const sourceInput = this.page.locator('input[placeholder*="From"], input[placeholder*="Source"], input[placeholder*="from"]').first();
+    const sourceInput = this.page.locator(SOURCE_INPUT_SELECTOR).first();
     await sourceInput.click();
     await sourceInput.fill(city);
-    const suggestion = this.page.locator(`li:has-text("${city}"), .autocomplete-item:has-text("${city}"), [class*="suggestion"]:has-text("${city}")`).first();
+    const suggestion = this.page.getByRole('listitem').filter({ hasText: city }).first();
     await suggestion.waitFor({ timeout: 10000 });
     await suggestion.click();
 });
 
 When('User enters {string} as the destination city', async function (city) {
-    const destInput = this.page.locator('input[placeholder*="To"], input[placeholder*="Destination"], input[placeholder*="to"]').first();
+    const destInput = this.page.locator(DEST_INPUT_SELECTOR).first();
     await destInput.click();
     await destInput.fill(city);
-    const suggestion = this.page.locator(`li:has-text("${city}"), .autocomplete-item:has-text("${city}"), [class*="suggestion"]:has-text("${city}")`).first();
+    const suggestion = this.page.getByRole('listitem').filter({ hasText: city }).first();
     await suggestion.waitFor({ timeout: 10000 });
     await suggestion.click();
 });
@@ -52,7 +56,7 @@ Then('the bus search should be initiated successfully', async function () {
 });
 
 Then('the bus search results should be displayed', async function () {
-    const results = this.page.locator('[class*="bus-item"], [class*="busItem"], [class*="bus-card"], [class*="busCard"], [class*="result"]').first();
+    const results = this.page.locator(BUS_RESULT_SELECTOR).first();
     await results.waitFor({ timeout: 30000 });
     await expect(results).toBeVisible();
 });
@@ -71,7 +75,7 @@ When('User applies a departure time filter', async function () {
 });
 
 Then('the filtered bus results should be displayed', async function () {
-    const results = this.page.locator('[class*="bus-item"], [class*="busItem"], [class*="bus-card"], [class*="busCard"], [class*="result"]').first();
+    const results = this.page.locator(BUS_RESULT_SELECTOR).first();
     await results.waitFor({ timeout: 20000 });
     await expect(results).toBeVisible();
 });
